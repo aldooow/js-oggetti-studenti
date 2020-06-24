@@ -52,13 +52,11 @@ var studentiBoolean = [
 
 var source = document.getElementById("template").innerHTML;
 var template = Handlebars.compile(source);
-
-var myData = {
-  nome: "lamerta",
-  cognome: "Lamerco"
-};
-// var html = template(studentiBoolean[0]);
-//
+// var myData = {
+//   nome: "nomeTest",
+//   cognome: "cognomeTest"
+// };
+// var html = template(myData);
 // $(".container").append(html);
 var studenteNuovo = {
   "nome" : prompt("Inserisce Nome"),
