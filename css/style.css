@@ -1,3 +1,23 @@
+/* BEGIN RESET */
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* END RESET */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: lightblue;
+}
+.wrapper {
+  width: 70%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  background: white;
+}
 .hidden {
   display: none;
 }
