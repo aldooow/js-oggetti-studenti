@@ -10,16 +10,21 @@
     <title>Oggeti|Studenti</title>
   </head>
   <body>
-
+    <h1>Lista Studenti Boolean</h1>
     <div class="container">
+
 
     </div>
 
     <script id="template" type="text/x-handlebars-template">
       <div class="entry">
-        <h2 class="index">STUDENTE</h2>
-        <h4>Nome: {{ nome }}</h4>
-        <h4>Cognome: {{ cognome }}</h4>
+        <h4>STUDENTE {{ index }}</h4>
+        <ul>
+          <li>Nome: {{ nome }}</li>
+          <li>Cognome: {{ cognome }}</li>
+          <li>Età: {{ eta }}</li>
+        </ul>
+
       </div>
 
     </script>

@@ -27,25 +27,25 @@ var studentiBoolean = [
     "index" : 1,
     "nome" : "Carlo",
     "cognome" : "Ferrero",
-    "eta" : 30
+    "eta" : 28
   },
   {
     "index" : 2,
     "nome" : "Valerio",
     "cognome" : "Barbanti",
-    "eta" : 30
+    "eta" : 35
   },
   {
     "index" : 3,
     "nome" : "Robert",
     "cognome" : "Campobasso",
-    "eta" : 30
+    "eta" : 31
   },
   {
     "index" : 4,
     "nome" : "Massimo",
     "cognome" : "Manelli",
-    "eta" : 30
+    "eta" : 17
   }
 
 ];
@@ -59,13 +59,15 @@ var template = Handlebars.compile(source);
 // var html = template(myData);
 // $(".container").append(html);
 var studenteNuovo = {
+  "index" : studentiBoolean.length + 1,
   "nome" : prompt("Inserisce Nome"),
-  "cognome" : prompt("Inserisce Cognome")
+  "cognome" : prompt("Inserisce Cognome"),
+  "eta" : prompt("Inserire Età"),
+
 }
 studentiBoolean.push(studenteNuovo)
 for(var i = 0; i<studentiBoolean.length; i++){
   var html = template(studentiBoolean[i]);
-  // console.log(i + 1)
   $(".container").append(html);
 
 };
