@@ -22,48 +22,27 @@ for(var key in studente0 ){
 
 // - Creare un array di oggetti di studenti. Ciclare su tutti gli studenti e
 // stampare per ognuno nome e cognome
-
-// var studente1 = {
-//   "nome" : "Carlo",
-//   "cognome" : "Ferrero",
-//   "eta" : 30
-// };
-//
-// var studente2 = {
-//   "nome" : "Valerio",
-//   "cognome" : "Barbanti",
-//   "eta" : 30
-// };
-//
-// var studente3 = {
-//   "nome" : "Robert",
-//   "cognome" : "Campobasso",
-//   "eta" : 30
-// };
-//
-// var studente4 = {
-//   "nome" : "Massimo",
-//   "cognome" : "Manelli",
-//   "eta" : 30
-// }
-
 var studentiBoolean = [
   {
+    "index" : 1,
     "nome" : "Carlo",
     "cognome" : "Ferrero",
     "eta" : 30
   },
   {
+    "index" : 2,
     "nome" : "Valerio",
     "cognome" : "Barbanti",
     "eta" : 30
   },
   {
+    "index" : 3,
     "nome" : "Robert",
     "cognome" : "Campobasso",
     "eta" : 30
   },
   {
+    "index" : 4,
     "nome" : "Massimo",
     "cognome" : "Manelli",
     "eta" : 30
@@ -71,4 +50,24 @@ var studentiBoolean = [
 
 ];
 
-console.log(studentiBoolean)
+var source = document.getElementById("template").innerHTML;
+var template = Handlebars.compile(source);
+
+var myData = {
+  nome: "lamerta",
+  cognome: "Lamerco"
+};
+// var html = template(studentiBoolean[0]);
+//
+// $(".container").append(html);
+var studenteNuovo = {
+  "nome" : prompt("Inserisce Nome"),
+  "cognome" : prompt("Inserisce Cognome")
+}
+studentiBoolean.push(studenteNuovo)
+for(var i = 0; i<studentiBoolean.length; i++){
+  var html = template(studentiBoolean[i]);
+  // console.log(i + 1)
+  $(".container").append(html);
+
+};
